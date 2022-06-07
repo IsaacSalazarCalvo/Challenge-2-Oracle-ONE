@@ -10,7 +10,7 @@ btn_guardar_jugar.addEventListener("click", function(event){
         return;
     }else{
         if(palabra_ingreso.value.length > 2 && palabra_ingreso.value.length <= 12){
-            let palabra_nueva = palabra_ingreso.value;
+            let palabra_nueva = palabra_ingreso.value.trim().replace(/ /g, "");
             vector_usuario.push(palabra_nueva);
             vector_palabras.push(palabra_nueva);
             palabra_ingreso.value="";
