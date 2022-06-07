@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0">
+        <title>Ahorcado</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap">
+    </head>
+
+    <body>
+        <main>
+            <section class="inicio">
+                <div class="contenedor-inicio">
+                    <div class="titulo-ahorcado">
+                        <h2 class="titulo"><span class="typed"></span> </h2>
+                    </div>
+                    <div class="botones-inicio">
+                        <button class="btn-iniciar-juego">Iniciar juego</button>
+                        <button class="btn-agregar-palabra">Agregar palabra</button>
+                    </div>
+                </div>                
+            </section>
+
+            <section class="palabra-usuario">
+                <div class="contenedor-agregar-palabra">
+                    <div class="ingreso-palabra">
+                        <input type="text" name="agregar-palabra" placeholder="Ingrese la nueva palabra aquí..." onkeyup="mayusculas(this)" class="agregar-palabra">
+                    </div>
+                    <div class="alerta">
+                        <p class="condiciones" id="condiciones">⚠ Máximo de 12 letras y mínimo de 3 letras, sin acentos ni caracteres especiales.</p>
+                    </div>
+                    <div class="botones-agregar-palabra">
+                        <button class="btn-guardar-jugar">Guardar y jugar</button>
+                        <button class="btn-cancelar">Cancelar</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="juego-ahorcado">
+                <div class="contenedor-ahorcado">
+                    <div class="canvas-2">
+                        <canvas class="canvas" width="350px" height="400px"></canvas>
+                        <span class="ganador">¡Felicidades, ganaste! 🏆<br><br><br>Fin de la partida</span>
+                        <span class="perdedor"></span>
+                    </div>
+                    <div class="letras"></div>
+                    <div class="letras-falladas"></div>
+                    <div class="teclado">
+                        <div class="teclado-fila1"></div>
+                        <div class="teclado-fila2"></div>
+                        <div class="teclado-fila3"></div>
+                    </div>
+                    <div class="botones-ahorcado">
+                        <button class="btn-nuevo-juego">Nuevo juego</button>
+                        <button class="btn-rendirse">Volver</button>
+                    </div>                    
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Desarrollado por Isaac Salazar Calvo</p><br>
+            <a href="https://www.linkedin.com/in/isaac-salazar-218310237/" target="_blank"><img src="Imagenes/linkedin-logo.png" class="logo"></a>
+			<a href="https://github.com/IsaacSalazarCalvo" target="_blank"><img src="Imagenes/GitHub-logo.png" class="logo"></a>
+        </footer>
+    </body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="js/inicio.js"></script>
+<script src="js/ahorcado.js"></script>
+<script src="js/agregarpalabra.js"></script>
+<script src="js/permitir.js"></script>

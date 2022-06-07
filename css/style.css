@@ -1,0 +1,441 @@
+html{
+    height: 100%;
+}
+
+body{
+    display: grid;
+    height: 100%;
+    grid-template-rows: auto 1fr auto;
+    background-color: #13141c;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*inicio*/
+
+.contenedor-inicio{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+}
+.titulo-ahorcado{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.titulo{
+    font-size: 5em;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin: 1em;
+}
+
+.botones-inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-iniciar-juego{
+    box-sizing: border-box;
+    background-color: #0A3871;
+    width: 14em;
+    height: 4em;
+    border-radius: 1em;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin: 1em;
+}
+
+.btn-agregar-palabra{
+    box-sizing: border-box;
+    background-color: gray;
+    width: 14em;
+    height: 4em;
+    border-radius: 1em;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin: 1em 0 8em;
+}
+/*agregar palabra*/
+.contenedor-agregar-palabra{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    justify-content: center;
+    align-content: center;
+}
+
+.ingreso-palabra{
+    display: flex;
+    align-items: center;
+    padding-top: 10em; 
+    padding-bottom: 1em;
+}
+
+.agregar-palabra{
+    background: none;/*rgb(31, 31, 54);*/
+    resize: none;
+    border: 1px solid lightgray;
+    border-radius: .5em;
+    width: 20em;
+    height: 2em;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: white;
+}    
+
+.agregar-palabra ::placeholder{
+    text-transform: lowercase;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    color: gray;
+    padding-left: .3em;
+}
+
+.alerta{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2em;
+    gap: 1em;
+}
+
+.condiciones{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: lightgray;
+}
+
+.condiciones::first-letter {
+    color: yellow;
+}
+
+.botones-agregar-palabra{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1em;   
+    gap: 1em;
+}
+
+.btn-guardar-jugar{
+    box-sizing: border-box;
+    background-color: #0A3871;
+    width: 14em;
+    height: 4em;    
+    border-radius: 1em;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    color: white;
+    margin: .5em;
+}
+
+.btn-cancelar{
+    box-sizing: border-box;
+    background-color: gray;
+    width: 14em;
+    height: 4em;    
+    border-radius: 1em;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    color: white;
+    margin: .5em 0 12em;
+}
+
+/*ahorcado*/
+
+.contenedor-ahorcado{
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    justify-content: center;
+    align-content: center;
+}
+
+.canvas-2{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 1em;
+}
+
+.ganador{
+    position: absolute;
+    margin-top: 2em;
+    font-family: 'Montserrat';
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+    color: rgba(89, 231, 7, 0.925);
+}
+
+.perdedor{
+    position: absolute;
+    margin-top: 2em;
+    font-family: 'Montserrat';
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+}
+
+.letras{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    padding: 0.5em;
+}
+
+.guiones{
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid lightgray;
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.letras-falladas{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    padding: 1em;
+}
+
+.falladas{
+    margin: .5em 0;
+    font-family: 'Montserrat';
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    color: gray;
+}
+
+.palabrarandom{
+    margin-top: .5em;
+    font-family: 'Montserrat';
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    color: rgba(231, 52, 7, 0.925);
+}
+
+.teclado{
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    align-content: center;
+}
+
+.teclado-fila1, .teclado-fila2, .teclado-fila3{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    padding: .6em;
+}
+
+.tecla{
+    box-sizing: border-box;
+    background-color: gray;
+    width: 3em;
+    height: 3em;    
+    border-radius: .3em;
+    font-family: 'Monserrat';
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 22px;
+    text-align: center;
+    color: white;
+}
+
+.tecla_perdida{
+    opacity: 50%;
+}
+
+.botones-ahorcado{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    transform: translateX(+8.5%);
+    padding: 1em;   
+    gap: 1em;
+}
+
+.btn-nuevo-juego{
+    box-sizing: border-box;
+    background-color: #0A3871;
+    width: 14em;
+    height: 4em;    
+    border-radius: 1em;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    color: white;
+    margin: .5em;
+}
+
+.btn-rendirse{
+    box-sizing: border-box;
+    background-color: gray;
+    width: 14em;
+    height: 4em;    
+    border-radius: 1em;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    color: white;
+    margin: .5em;
+}
+
+footer{
+    background-color: #0b0c13;
+    text-align: center;
+    padding: 1em;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logo{
+    width: 30px;
+    padding: 0 0.1em;
+}
+
+@media screen and (max-width:768px){
+    .contenedor-inicio{
+        height: auto;
+    }
+
+    .titulo-ahorcado{
+        padding: 0em;
+        padding-top: 5em;
+    }
+
+    .titulo{
+        font-size: 2.3em;
+    }
+
+    .contenedor-agregar-palabra{
+        grid-template-rows: auto auto auto;
+    }
+
+    .ingreso-palabra{
+        display: flex;
+        align-items: center;
+        padding-top: 12em;
+        padding-bottom: 1em;
+    }
+
+    .agregar-palabra{
+        width: 14em;
+        font-size: 24px;
+        margin-left: 1em;
+    }
+    
+    .agregar-palabra::placeholder{
+        font-size: 17px;
+    }
+
+    .alerta{
+        margin: 0em 1.5em 1em 1.5em;
+    }
+
+    .botones-agregar-palabra, .botones-ahorcado{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0em;
+        gap: 0em;
+        transform: translateX(0%);
+    }
+
+    .btn-iniciar-juego, .btn-agregar-palabra, .btn-guardar-jugar, .btn-nuevo-juego, .btn-cancelar, .btn-rendirse{
+        width: 12em;
+        height: 4em;    
+        line-height: 19px;
+    }
+
+    .letras{
+        gap: .5em;
+        margin: 0.2em;
+        padding: 0em;
+    }
+
+    .guiones{
+        width: 1em;
+        height: 1.5em;
+        font-size: 20px;
+    }    
+
+    .falladas, .palabrarandom{
+        font-size: 18px;
+    }
+
+    .canvas-2{
+        padding: 0em;
+        margin-bottom: 0.5em;
+    }
+
+    .teclado{
+        margin-bottom: 5em;
+    }
+
+    .teclado-fila1, .teclado-fila2, .teclado-fila3{
+        gap: 0.3em;
+        padding: 0em;
+        margin-top: 0.3em;
+    }
+
+    .tecla{
+        width: 1.8em;
+        height: 1.8em;    
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+}
